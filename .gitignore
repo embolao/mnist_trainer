@@ -1,54 +1,51 @@
-# Temporary and binary files
-*~
+# Ignorar el entorno virtual
+venv/
+
+# Ignorar archivos de Python
+__pycache__/
 *.py[cod]
-*.so
-*.cfg
-!.isort.cfg
-!setup.cfg
-*.orig
+*$py.class
+
+# Ignorar configuraciones de entorno o IDEs
+*.env
+*.venv
+.env/
+.venv/
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar archivos de Jupyter
+.ipynb_checkpoints/
+
+# Ignorar datos temporales
 *.log
 *.pot
-__pycache__/*
-.cache/*
-.*.swp
-*/.ipynb_checkpoints/*
-.DS_Store
+*.pyc
+*.pyo
+*.db
+*.sqlite3
 
-# Project files
-.ropeproject
-.project
-.pydevproject
-.settings
-.idea
-.vscode
-tags
+# Ignorar distribuciones
+dist/
+build/
+*.egg-info/
 
-# Package files
-*.egg
-*.eggs/
-.installed.cfg
-*.egg-info
-
-# Unittest and coverage
-htmlcov/*
+# Ignorar archivos de cobertura de tests
 .coverage
 .coverage.*
 .tox
 junit*.xml
 coverage.xml
-.pytest_cache/
+htmlcov/
 
-# Build and docs folder/files
-build/*
-dist/*
-sdist/*
-docs/api/*
-docs/_rst/*
-docs/_build/*
-cover/*
-MANIFEST
+# Ignorar archivos de pytest
+.cache/
 
-# Per-project virtualenvs
-.venv*/
-.conda*/
-.python-version
+# Ignorar notebooks de outputs grandes (opcional)
+notebooks/*-output.ipynb
+
+# Ignorar datos pesados (opcional)
+data/
+models/
