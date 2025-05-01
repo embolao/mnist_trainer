@@ -1,24 +1,25 @@
 # mnist_trainer/train.py
 
-from mnist_trainer.data.data_loader import prepare_data
-from mnist_trainer.modelos.model import create_model
+from mnist_trainer.data.mejora_data_loader import prepare_data
+from mnist_trainer.modelos.modelo1 import create_improved_model
 
 
 def train_model():
-    # Cargar los datos
-    (X_train, y_train), (X_test, y_test) = prepare_data()
+    # Preparar los datos
+    train_data, test_data = prepare_data()
 
     # Crear el modelo
-    model = create_model()
+    model = create_improved_model()
 
     # Entrenar el modelo
-    model.fit(
-        X_train, y_train, epochs=5, batch_size=32, validation_data=(X_test, y_test)
-    )
+    try:
+        model.fit(train_data, epochs=5, validation_data=test_data)
+    except Exception as e:
+        print("Error durante el entrenamiento:", e)
 
     # Evaluar el modelo
-    test_loss, test_acc = model.evaluate(X_test, y_test)
-    print(f"Test accuracy: {test_acc}")
+    test_loss, test_acc = model.evaluate(test_data)
+    print(f"Precisión en test: {test_acc:.4f}")
 
 
 if __name__ == "__main__":
