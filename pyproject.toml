@@ -7,10 +7,16 @@ version_scheme = "no-guess-dev"
 
 [project]
 name = "mnist_trainer"
-dependencies = [
-    "click",
-    "tensorflow"
-]
+version = "0.1.0"
+# Eliminar el valor estático de description, readme, license, authors y classifiers
+# description = "Add a short description here!"  # elimina esta línea
+# readme = "README.md"  # elimina esta línea
+# license = { text = "MIT" }  # elimina esta línea
+# authors = [{ name = "embolao" }]  # elimina esta línea
+# classifiers = [ ... ]  # elimina esta línea
+
+# Mantén la sección dynamic
+dynamic = ["description", "readme", "license", "authors", "classifiers"]
 
 [project.scripts]
-mnist-train = "mnist_trainer.train:train_mnist_model"
+mnist-train = "mnist_trainer.train:train_model"
