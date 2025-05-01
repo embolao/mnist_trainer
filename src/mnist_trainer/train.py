@@ -1,7 +1,7 @@
 # mnist_trainer/train.py
 
-from mnist_trainer.data_loader import prepare_data
-from mnist_trainer.model import create_model
+from mnist_trainer.data.data_loader import prepare_data
+from mnist_trainer.modelos.model import create_model
 
 
 def train_model():
