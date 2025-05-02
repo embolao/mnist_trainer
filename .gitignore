@@ -49,3 +49,5 @@ notebooks/*-output.ipynb
 # Ignorar datos pesados (opcional)
 data/
 models/
+*.keras
+*.h5
