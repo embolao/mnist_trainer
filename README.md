@@ -119,3 +119,18 @@ This project has been set up using [PyScaffold] 4.6 and the [dsproject extension
 [Google style]: http://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings
 [PyScaffold]: https://pyscaffold.org/
 [dsproject extension]: https://github.com/pyscaffold/pyscaffoldext-dsproject
+
+# MNIST Trainer - Visualización de Modelos
+
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+Herramienta para entrenar y visualizar modelos de clasificación de dígitos MNIST.
+
+## 🚀 Instalación Rápida
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/tu-usuario/mnist-trainer.git
+cd mnist-trainer
